@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Booking Schedule</title>
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="img/garage-icon.png" alt="Garage Icon" class="logo" />
+    </div>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">Home</a>
+      <a href="admin-message.html">Message</a>
+      <a href="admin-schedule.html">Booking</a>
+      <a href="login.html" class="logout-btn">Logout</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="booking-section">
+      <h2>Scheduled Appointments</h2>
+      <input type="date" id="filter-date">
+      <select id="filter-time">
+        <option value="all">All</option>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+      </select>
+      <div id="booking-list"></div>
+    </section>
+
+    <div class="overlay" id="booking-overlay">
+      <div class="overlay-content">
+        <span class="close-btn" onclick="closeOverlay()">&times;</span>
+        <div id="overlay-details"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="admin-schedule.js"></script>
+</body>
+</html>

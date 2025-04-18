@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service & Quotation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="img/garage-icon.png" alt="Garage Logo" class="logo" />
+          </a>
+        </div>
+        <nav class="nav-wrapper">
+          <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Service & Quotation</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <ul class="staff-nav">
+            <li><a href="login.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <main>
+
+    <section class="service-buttons">
+        <h2>Select a Service to Know More</h2>
+        <div class="service-button-grid">
+          <button class="service-btn" data-service="minor">Minor Repair</button>
+          <button class="service-btn" data-service="major">Major Repair</button>
+          <button class="service-btn" data-service="general">General Service</button>
+          <button class="service-btn" data-service="health">Health Check</button>
+        </div>
+      </section>
+      
+      <!-- Overlay -->
+      <div id="service-overlay" class="service-overlay">
+        <div class="overlay-content">
+          <button class="close-overlay">&times;</button>
+          <h3 id="overlay-title"></h3>
+          <p id="overlay-desc"></p>
+        </div>
+      </div>
+      
+      
+      
+
+    <section class="table-section">
+        <h2>Other Services and Charges</h2>
+        <p>Below is a table of other services and their guiding charges and the type of the vehicles:</p>
+      
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2">Vehicle Type</th>
+              <th colspan="4">Type of Service</th>
+            </tr>
+            <tr>
+              <th>Minor Repair</th>
+              <th>Major Repair</th>
+              <th>General Service</th>
+              <th>Health Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SUV</td>
+              <td>£450</td>
+              <td>£1200</td>
+              <td>£200</td>
+              <td>£100</td>
+            </tr>
+            <tr>
+              <td>Minibus</td>
+              <td>£550</td>
+              <td>£1500</td>
+              <td>£350</td>
+              <td>£150</td>
+            </tr>
+            <tr>
+              <td>Convertible</td>
+              <td>£100</td>
+              <td>£800</td>
+              <td>£150</td>
+              <td>£50</td>
+            </tr>
+            <tr>
+              <td>Other types</td>
+              <td>£200</td>
+              <td>£1000</td>
+              <td>£150</td>
+              <td>£70</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+
+      <section class="quotation-section">
+        <h2>Get a Quotation</h2>
+        <form id="quotation-form">
+          <label for="vehicle-type">Select Vehicle Type:</label>
+          <select id="vehicle-type" required>
+            <option value="">-- Select --</option>
+            <option value="suv">SUV</option>
+            <option value="minibus">Minibus</option>
+            <option value="convertible">Convertible</option>
+            <option value="other">Other types</option>
+          </select>
+      
+          <label for="service-type">Select Service:</label>
+          <select id="service-type" required>
+            <option value="">-- Select --</option>
+            <option value="minor">Minor Repair</option>
+            <option value="major">Major Repair</option>
+            <option value="general">General Service</option>
+            <option value="health">Health Check</option>
+          </select>
+      
+          <button type="submit">Get Quotation</button>
+
+        </form>
+      
+        <div id="quotation-result"></div>
+        <p id="quotation-warning" class="warning-message" style="display: none;">
+          Final price will be provided after checking the car.
+        </p>
+        
+      </section>
+      
+
+  </main>
+
+  <footer>
+    <div class="footer-columns">
+
+<div class="footer-section">
+<h3>Follow Us</h3>
+<div class="social-icons">
+  <div class="icon-box">
+    <a href="https://facebook.com" target="_blank" title="Facebook">
+      <img src="img/facebook.png" alt="Facebook" />
+      <span>Facebook</span>
+    </a>
+  </div>
+  <div class="icon-box">
+    <a href="https://instagram.com" target="_blank" title="Instagram">
+      <img src="img/instagram.png" alt="Instagram" />
+      <span>Instagram</span>
+    </a>
+  </div>
+  <div class="icon-box">
+    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+      <img src="img/linkedin.png" alt="LinkedIn" />
+      <span>LinkedIn</span>
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="footer-section">
+  <h3>Opening Hours</h3>
+  <p><strong>Monday – Friday:</strong><br>09:00 – 18:00</p>
+  <p><strong>Saturday</strong><br>10:00 – 16:00</p>
+  <p><strong>Sunday:</strong><br>Closed</p>
+</div>
+  
+      <div class="footer-section">
+        <h3>Contact us</h3>
+        <p>📍 Aston St,<br>Birmingham,<br>B4 7ET</p>
+        <p>📞 0123 456 788</p>
+        <p>✉️ <a href="mailto:citycentregarage@email.com">citycentregarage@email.com</a></p>
+      </div>
+  
+     <div class="footer-section">
+        <h3>Map</h3>
+        <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.2463032471734!2d-1.889641684354015!3d52.486506479807665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bd30e027ab2d%3A0xdfaab6f5edbcad7d!2sAston%20University!5e0!3m2!1sen!2suk!4v1713315188360!5m2!1sen!2suk" 
+        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+         </iframe>
+     </div>
+
+  
+    </div>
+  
+    <p class="footer-copy">&copy; 2025 City Centre Vehicle Garage. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
